@@ -40,7 +40,7 @@ h1 {
     flex-direction: row;
     justify-content: space-between;
 }
-.loading_ball {
+.loading-ball {
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -74,7 +74,7 @@ h1 {
         transform: translateY(10px);
     }    
 }
-.loading_text {
+.loading-text {
     font-size: 15px;
 }
 
