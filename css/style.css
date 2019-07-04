@@ -61,18 +61,29 @@ h1 {
 }
 
 .loader-3 {
-    /* Your code goes here */
-    /* Remove this example */
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border-top: 3px solid rgba(255, 255, 255, 0.5);
-    border-right: 3px solid rgba(255, 255, 255, 0.5);
-    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
-    border-left: 3px solid rgba(255, 255, 255, 1);
-    animation: loader 1s cubic-bezier(.41, .25, .32, .83) infinite;
+    filter: blur(1.3px);
+}
+.loader-3_item-1 {
+    position: absolute;
+    background: white;
+    border-radius: 100%;
+    opacity: 0;
+    width: 60px;
+    height: 60px;
+    animation: circleScale1 2s infinite;
+    animation-timing-function: ease-in-out;
 }
 
+.loader-3_item-2 {
+    background: white;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+    animation: circleScale2 2s infinite;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+}
 .loader-4 {
     /* Your code goes here */
     /* Remove this example */
@@ -119,5 +130,33 @@ h1 {
     }
     100% {
         transform: rotate(1turn);
+    }
+}
+@keyframes circleScale1 {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+@keyframes circleScale2 {
+    0% {
+        transform: scale(0);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 0.75;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0.5;
     }
 }
