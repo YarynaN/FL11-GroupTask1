@@ -35,16 +35,47 @@ h1 {
 /* Group code starts here */
 
 .loader-1 {
-    /* Your code goes here */
-    /* Remove this example */
-    width: 32px;
-    height: 32px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.loading_ball {
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
-    border-top: 3px solid rgba(255, 255, 255, 0.5);
-    border-right: 3px solid rgba(255, 255, 255, 0.5);
-    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
-    border-left: 3px solid rgba(255, 255, 255, 1);
-    animation: loader 1s cubic-bezier(.41, .25, .32, .83) infinite;
+    background-color: #FFFFFF;
+    animation: jump 900ms infinite;
+}
+@keyframes jump {
+    0% {
+        width: 10px;
+        height: 8px;
+        border-radius: 50%;
+        transform: translateY(8px);
+    }
+    50% {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        transform: translateY(-15px);
+    }
+    80% {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        transform: translateY(5px);
+    }
+    100% {
+        width: 20px;
+        height: 4px;
+        border-bottom-left-radius: 20%;
+        border-bottom-right-radius: 20%;
+        transform: translateY(10px);
+    }    
+}
+.loading_text {
+    font-size: 15px;
 }
 
 .loader-2 {
