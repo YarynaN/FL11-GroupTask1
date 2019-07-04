@@ -87,17 +87,38 @@ h1 {
 }
 
 .loader-5 {
-    /* Your code goes here */
-    /* Remove this example */
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border-top: 3px solid rgba(255, 255, 255, 0.5);
-    border-right: 3px solid rgba(255, 255, 255, 0.5);
-    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
-    border-left: 3px solid rgba(255, 255, 255, 1);
-    animation: loader 1s cubic-bezier(.41, .25, .32, .83) infinite;
+    display: flex;
+    align-items: flex-end;
+    width: 65px;
+    height: 50px;
+    position: relative;
 }
+.loader-5>div {
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+}
+.loader-5_item-1{
+    left: 10px;
+    animation: runningDots1 .8s infinite;
+}
+.loader-5_item-2{
+    left: 10px;
+    animation: runningDots2 .8s infinite;
+}
+.loader-5_item-3{
+    left: 30px;
+    animation: runningDots2 .8s infinite;
+}
+.loader-5_item-4{
+    left: 50px;
+    animation: runningDots3 .8s infinite;
+}
+
 
 .loader-6 {
     /* Your code goes here */
@@ -121,3 +142,28 @@ h1 {
         transform: rotate(1turn);
     }
 }
+@keyframes runningDots1 {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes runningDots2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(19px, 0);
+    }
+}
+@keyframes runningDots3 {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
