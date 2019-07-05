@@ -59,7 +59,6 @@ h1 {
     border-left: 3px solid rgba(255, 255, 255, 1);
     animation: loader 1s cubic-bezier(.41, .25, .32, .83) infinite;
 }
-
 .loader-3 {
     filter: blur(1px);
 }
