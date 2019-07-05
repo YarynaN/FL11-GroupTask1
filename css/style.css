@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #fd9829;
+    background-color: #fe9907;
     color: white;
     display: grid;
     place-items: center;
@@ -105,16 +105,240 @@ h1 {
 }
 
 .loader-4 {
-    /* Your code goes here */
-    /* Remove this example */
-    width: 32px;
-    height: 32px;
+    width: 74px;
+    height: 50px;
+    position: relative;
+}
+
+.line {
+    background-color: #fff;
+    width: 10px;
+    position: absolute;
+    bottom: 0;
+    box-shadow: 1px 1px 3px 0px rgba(88, 88, 88, 0.75);
+}
+
+.loader-4::after {
+    content: '';
+    position: absolute;
+    width: 9px;
+    height: 9px;
     border-radius: 50%;
-    border-top: 3px solid rgba(255, 255, 255, 0.5);
-    border-right: 3px solid rgba(255, 255, 255, 0.5);
-    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
-    border-left: 3px solid rgba(255, 255, 255, 1);
-    animation: loader 1s cubic-bezier(.41, .25, .32, .83) infinite;
+    background-color: #fff;
+    animation: dot-loader 4s linear infinite;
+}
+
+.line-1 {
+    left: 0;
+    animation: bar-loader1 4s linear infinite;
+}
+
+.line-2 {
+    left: 16px;
+    animation: bar-loader2 4s linear infinite;
+}
+
+.line-3 {
+    left: 32px;
+    height: 60%;
+}
+
+.line-4 {
+    left: 48px;
+    animation: bar-loader3 4s linear infinite;
+
+}
+
+.line-5 {
+    left: 64px;
+    animation: bar-loader4 4s linear infinite;
+    box-shadow: 1px 1px 2px 0px rgba(255, 255, 255, 0.75);
+}
+
+@keyframes bar-loader1 {
+    0% {
+        height: 20%;
+    }
+
+    45% {
+        height: 20%;
+    }
+
+    50% {
+        height: 100%;
+    }
+
+    95% {
+        height: 100%;
+    }
+
+    100% {
+        height: 20%;
+    }
+}
+
+@keyframes bar-loader2 {
+    0% {
+        height: 40%;
+    }
+
+    45% {
+        height: 40%;
+    }
+
+    50% {
+        height: 80%;
+    }
+
+    95% {
+        height: 80%;
+    }
+
+    100% {
+        height: 40%;
+    }
+}
+
+@keyframes bar-loader3 {
+    0% {
+        height: 80%;
+    }
+
+    45% {
+        height: 80%;
+    }
+
+    50% {
+        height: 40%;
+    }
+
+    95% {
+        height: 40%;
+    }
+
+    100% {
+        height: 80%;
+    }
+}
+
+@keyframes bar-loader4 {
+    0% {
+        height: 100%;
+    }
+
+    45% {
+        height: 100%;
+    }
+
+    50% {
+        height: 20%;
+    }
+
+    95% {
+        height: 20%;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+
+@keyframes dot-loader {
+    0% {
+        left: 0;
+        bottom: 10px;
+    }
+
+    10% {
+        left: 0;
+        bottom: 10px;
+    }
+
+    15% {
+        bottom: 25px;
+    }
+
+    20% {
+        left: 16px;
+        bottom: 20px;
+    }
+
+    25% {
+        bottom: 35px;
+    }
+
+    30% {
+        left: 32px;
+        bottom: 30px;
+    }
+
+    35% {
+        bottom: 45px;
+    }
+
+    40% {
+        left: 48px;
+        bottom: 40px;
+    }
+
+    42% {
+        bottom: 55px;
+    }
+
+    45% {
+        left: 64px;
+        bottom: 50px;
+    }
+
+    50% {
+        bottom: 10px;
+    }
+
+    60% {
+        left: 64px;
+        bottom: 10px;
+    }
+
+    65% {
+        bottom: 25px;
+    }
+
+    70% {
+        left: 48px;
+        bottom: 20px;
+    }
+
+    75% {
+        bottom: 35px;
+    }
+
+    80% {
+        left: 32px;
+        bottom: 30px;
+    }
+
+    85% {
+        bottom: 45px;
+    }
+
+    90% {
+        left: 16px;
+        bottom: 40px;
+    }
+
+    92% {
+        bottom: 55px;
+    }
+
+    95% {
+        left: 0;
+        bottom: 50px;
+    }
+
+    100% {
+        bottom: 10px;
+    }
 }
 
 .loader-5 {
@@ -169,6 +393,7 @@ h1 {
     0% {
         transform: rotate(0);
     }
+
     100% {
         transform: rotate(1turn);
     }
@@ -197,4 +422,3 @@ h1 {
         transform: scale(0);
     }
 }
-
