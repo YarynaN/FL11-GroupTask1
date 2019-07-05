@@ -61,13 +61,13 @@ h1 {
 }
 
 .loader-3 {
-    filter: blur(1.1px);
+    filter: blur(1px);
 }
 .loader-3-item-1 {
     position: absolute;
     background: white;
     border-radius: 100%;
-    opacity: 0;
+    opacity: 0.65;
     width: 40px;
     height: 40px;
     animation: circle-scale-1 2s infinite;
@@ -79,9 +79,9 @@ h1 {
     border-radius: 100%;
     width: 40px;
     height: 40px;
-    opacity: 0;
+    opacity: 0.65;
     animation: circle-scale-2 2s infinite;
-    animation-delay: 1s;
+    animation-delay: -1s;
     animation-timing-function: ease-in-out;
 }
 .loader-4 {
@@ -135,28 +135,28 @@ h1 {
 @keyframes circle-scale-1 {
     0% {
         transform: scale(0);
-        opacity: 0;
+        opacity: 0.65;
     }
     50% {
         transform: scale(1);
-        opacity: 0.8;
+        opacity: 0.5;
     }
     100% {
         transform: scale(0);
-        opacity: 0;
+        opacity: 0.65;
     }
 }
 @keyframes circle-scale-2 {
     0% {
         transform: scale(0);
-        opacity: 0.8;
+        opacity: 0.65;
     }
     50% {
         transform: scale(1);
-        opacity: 0.75;
+        opacity: 0.5;
     }
     100% {
         transform: scale(0);
-        opacity: 0.5;
+        opacity: 0.65;
     }
 }
