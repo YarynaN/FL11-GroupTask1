@@ -92,18 +92,29 @@ h1 {
 }
 
 .loader-3 {
-    /* Your code goes here */
-    /* Remove this example */
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border-top: 3px solid rgba(255, 255, 255, 0.5);
-    border-right: 3px solid rgba(255, 255, 255, 0.5);
-    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
-    border-left: 3px solid rgba(255, 255, 255, 1);
-    animation: loader 1s cubic-bezier(.41, .25, .32, .83) infinite;
+    filter: blur(1.1px);
+}
+.loader-3-item-1 {
+    position: absolute;
+    background: white;
+    border-radius: 100%;
+    opacity: 0;
+    width: 40px;
+    height: 40px;
+    animation: circle-scale-1 2s infinite;
+    animation-timing-function: ease-in-out;
 }
 
+.loader-3-item-2 {
+    background: white;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    animation: circle-scale-2 2s infinite;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+}
 .loader-4 {
     width: 74px;
     height: 50px;
@@ -398,6 +409,36 @@ h1 {
         transform: rotate(1turn);
     }
 }
+
+@keyframes circle-scale-1 {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+@keyframes circle-scale-2 {
+    0% {
+        transform: scale(0);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 0.75;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0.5;
+  }
+}
+
 @keyframes runningDots1 {
     0% {
         transform: scale(0);
