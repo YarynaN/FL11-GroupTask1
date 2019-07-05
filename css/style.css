@@ -539,19 +539,42 @@ h1 {
     animation: runningDots3 .8s infinite;
 }
 
+/* loader 6 */
 
 .loader-6 {
-    /* Your code goes here */
-    /* Remove this example */
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border-top: 3px solid rgba(255, 255, 255, 0.5);
-    border-right: 3px solid rgba(255, 255, 255, 0.5);
-    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
-    border-left: 3px solid rgba(255, 255, 255, 1);
-    animation: loader 1s cubic-bezier(.41, .25, .32, .83) infinite;
-}
+    position: relative;
+    text-align: center;
+    margin: 100px auto;
+    width: 40px;
+    height: 40px;
+    animation: dot-rotate 2s infinite linear;
+    }
+  
+.dot1, 
+.dot2 {
+    display: inline-block;
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    top: 0;
+    background-color: #fff;
+    border-radius: 100%;
+    animation: dot-bounce 2s infinite ease-in-out;
+    }
+  
+  .dot2 {
+    top: auto;
+    bottom: 0;
+    animation-delay: -1s;
+  }
+
+  @keyframes dot-rotate { 
+    100% { transform: rotate(360deg);}}
+
+  @keyframes dot-bounce { 
+    0%,100% { transform: scale(0);} 
+    50% { transform: scale(1);}
+  }
 
 /* Additional keyframes code*/
 @keyframes loader {
